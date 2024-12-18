@@ -17,4 +17,4 @@ jobs:
     if: github.ref_name == 'main'
     steps:
     - run: echo "ON MAIN!"
-    - run: ${{ github.ref_name }}
+    - run: echo ${{ github.ref_name }}
