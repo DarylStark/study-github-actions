@@ -25,3 +25,4 @@ jobs:
     if: github.ref_name == 'dev'
     steps:
     - run: echo ${{ github.ref_type == 'main' }}
+    - run: echo ${{ github.ref_type == 'dev' }}
