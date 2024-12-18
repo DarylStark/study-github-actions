@@ -11,4 +11,10 @@ jobs:
     steps:
     - run: env | sort
     - run: echo ${{ vars.DS_TEST }}
-    
+  print-only-on-main:
+    name: Print only on main
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'main'
+    steps:
+    - run: echo "ON MAIN!"
+    - run: ${{ github.ref_name }}
