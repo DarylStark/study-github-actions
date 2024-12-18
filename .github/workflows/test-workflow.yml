@@ -18,3 +18,4 @@ jobs:
     steps:
     - run: echo "ON MAIN!"
     - run: echo ${{ github.ref_name }}
+    - run: echo ${{ github.ref_type }}
