@@ -19,3 +19,9 @@ jobs:
     - run: echo "ON MAIN!"
     - run: echo ${{ github.ref_name }}
     - run: echo ${{ github.ref_type }}
+  print-only-on-dev:
+    name: Print only on dev
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'dev'
+    steps:
+    - run: echo ${{ github.ref_type == 'main' }}
